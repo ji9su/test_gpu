@@ -26,10 +26,10 @@ import torch
 
 import transformers
 from torch.utils.data import Dataset
-from llava.train.llava_trainer import LLaVATrainer
+from llava_trainer import LLaVATrainer
 
-from llava import conversation as conversation_lib
-from llava import LlavaLlamaForCausalLM
+from conversation  import Conversation as conversation_lib
+from model.llava import LlavaLlamaForCausalLM
 
 from PIL import Image
 import torch.nn as nn
@@ -624,3 +624,4 @@ def train():
 
 if __name__ == "__main__":
     train()
+
